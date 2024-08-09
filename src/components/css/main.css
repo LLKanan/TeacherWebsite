@@ -1,0 +1,121 @@
+/*Styling for all*/
+:root {
+  --textColour: #061813;
+  --backgroundColour: #effbf8;
+  --primaryColour: #49d0ae;
+  --secondaryColour: #92b7e3;
+  --accentColour: #6c80da;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColour);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--secondaryColour); /* White background */
+  max-width:520px;
+  width:50%;
+  min-width:320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*Styling for Forms*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.text {
+  color: var(--textColour);
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.inputs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width:85%;
+  height: 60px;
+  background: var(--backgroundColour); 
+  background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+  border-radius: 6px;
+}
+
+.input input {
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColour); /* Grey text */
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.subheader {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--textColour); 
+  font-size: 15px;
+}
+
+a{
+  color:var(--primaryColour);
+}
+
+a:visited{
+  color:var(--accentColour);
+}
+
+.submit-container {
+  display: flex;
+  margin: auto;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 55px;
+  color: var(--textColour); 
+  background: var(--primaryColour);
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error {
+  align-self: center;
+  color: #FF0033; /* Red text */
+}
+
+.serverError {
+  align-self: center;
+  color: #FF0033; /* Red text */
+}
