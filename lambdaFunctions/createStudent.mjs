@@ -62,8 +62,31 @@ export const handler = async (event, context) => {
 
   }
 
-  if (firstName) item.FirstName = { S: firstName};
+  if (firstName) item.FirstName{
+   
+   { S: firstName};
+   
+  }
+ else{
+  
+    let response = {
 
+      statusCode: '400',
+
+      body: JSON.stringify({ error: 'Missing Student First Name'}),
+
+      headers: {
+
+        'Content-Type': 'application/json'
+
+      }
+
+    };
+
+    return response;
+ }
+
+ 
   if (lastName) item.LastName = { S: lastName};
 
   if (DOB){
