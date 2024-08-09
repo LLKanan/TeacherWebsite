@@ -12,6 +12,7 @@ const AddStudent = () => {
   const [dob, setdob] = useState('');
 
   let [studentIDError,setStudentIDError] = useState('');
+  let [firstNameError,setfirstNameError] = useState('');
   let [emailError,setEmailError] = useState('');
   let [dobError,setdobError] = useState('');
   let [serverError,setServerError] = useState('');
@@ -25,6 +26,13 @@ const AddStudent = () => {
     if (studentID == ''){
       localValidation=false;
       setStudentIDError('Error: Empty Student ID');
+    }
+    else{
+      setStudentIDError('');
+    }
+    if (firstName == ''){
+      localValidation=false;
+      setStudentIDError('Error: Empty First Name');
     }
     else{
       setStudentIDError('');
@@ -108,7 +116,7 @@ const AddStudent = () => {
             onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
-        <span className='error'></span>
+        <span id='firstNameError' className='error'>{firstNameError}</span>
         <div className='input'>
           <input
             type="text"
