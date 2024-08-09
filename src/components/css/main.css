@@ -119,3 +119,82 @@ a:visited{
   align-self: center;
   color: #FF0033; /* Red text */
 }
+
+/* Table styling */
+table {
+  width: 100%;
+  min-width: 320px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+thead {
+  background-color: var(--primaryColour); 
+  color: var(--textColour); 
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--secondaryColour); 
+  filter:brightness(99%);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--secondaryColour); 
+  filter: brightness(85%);
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #000000; /* Black border */
+}
+
+tbody tr:hover {
+  background-color: var(--accentColour);
+  color: var(--backgroundColour); 
+}
+
+
+/*Navigation Styling*/
+.topnav {
+  background-color: var(--textColour);
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: var(--accentColour);
+  color: var(--textColour);
+}
+
+.topnav a.active {
+  background-color: var(--primaryColour);
+  color: var(--textColour);
+}
+
+.userWidget {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.tableName{
+  text-align:left;
+  margin:10px;
+  color:var(--textColour);
+}
